@@ -1,4 +1,4 @@
-# eXampplers_casestudy
+# eXampplers - Case Study 1
 
 Group eXampplers
 - Afnan Iman bin Azman (1920311)
@@ -6,9 +6,10 @@ Group eXampplers
 - Muhammad Hazim bin Ibrahim (2014309)
 
 ## **Task Distribution**
-- Afnan
-- Sharul
-- Hazim
+
+- Afnan: 
+- Sharul: 
+- Hazim: 
 
 ## **Description**
 
