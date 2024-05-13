@@ -7,9 +7,9 @@ Group eXampplers
 
 ## **Task Distribution**
 
-- Afnan: 
-- Sharul: 
-- Hazim: 
+- Afnan: Automated Scan (All Vulnerabilities), Manual Scan (To verify and compare the alerts obatined from other members)
+- Sharul: Manual Scan (Secured Cookies, CSP, JS Library, HTTPS implementation (TLS/SSL), Cookie Poisoning)
+- Hazim: Manual Scan(Server OS and Server-Side Scripting used, Hash Disclosure, CSRF, Potential XSS, Information Disclosure)
 
 ## **Table of Contents**
 
