@@ -28,10 +28,34 @@ Case Study website: https://ibayaq.kedah.gov.my/
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc
 
+## Automated Scan and manual scan
 
+**Alert: Cross-Domain JavaScript Source File Inclusion**
+- **Identify**
+  - Risk: Low
+  - Confidence: Medium
+  - CWE ID: 829
 
+ - **Evaluate**
+   - The page includes one or more script files from a third-party domain
+  
+  - **Prevent**
+    - Ensure JavaScript source files are loaded from only trusted sources, and the sources can't 
+be controlled by end users of the application.
 
-## Manual Scan
+**Alert: Timestam disclosure - Unix**
+- **Identify**
+  - Risk: Low
+  - Confidence: low
+  - CWE ID: 200
+
+ - **Evaluate**
+   - A timestamp was disclosed by the application/web server - Unix
+  
+  - **Prevent**
+    - Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.
+
+## Manual Scan only
 
 **Alert: Server Leaks Version Information via "Server" HTTP Response Header Field**
 - **Identify**
@@ -47,116 +71,72 @@ Case Study website: https://ibayaq.kedah.gov.my/
     - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Hash Disclosure
-
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# CSRF
-
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Secured Cookies
-
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # CSP
 
-
-
-## Manual Scan
-
-**Alert: **
+## Automated Scan and Manual Scan
+**Alert: CSP: Wildcard Directive**
 - **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
 
  - **Evaluate**
-   - 
+   - Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate 
+     certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data
+     injection attacks. These attacks are used for everything from data theft to site defacement
+     or distribution of malware. CSP provides a set of standard HTTP headers that allow website
+     owners to declare approved sources of content that browsers should be allowed to load on
+     that page — covered types are JavaScript, CSS, HTML frames, fonts, images and
+     embeddable objects such as Java applets, ActiveX, audio and video files.
   
   - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# JS Library
-
-## Automatic Scan
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to
+      set the Content-Security-Policy header.
 
 
-
-## Manual Scan
-
-**Alert: **
+  **Alert: CSP: script-src unsafe-eval**
 - **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
 
  - **Evaluate**
-   - 
+   - that scripts can be executed with the ability to use eval() and similar dynamic code execution functions.
   
   - **Prevent**
-    - 
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
+   
+    **Alert: CSP: script-src unsafe-inline**
+- **Identify**
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
+
+ - **Evaluate**
+   - The unsafe-inline value in the script-src directive of a Content Security Policy (CSP) indicates that inline JavaScript code (code directly embedded within HTML) is allowed to be executed.
+  
+  - **Prevent**
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header
+   
+    **Alert: CSP: style-src unsafe-inline**
+- **Identify**
+  - Risk: medium
+  - Confidence: medium
+  - CWE ID: 693
+
+ - **Evaluate**
+   - The unsafe-inline value in the style-src directive of a Content Security Policy (CSP) indicates that inline CSS styles (styles directly embedded within HTML) are allowed to be applied.
+  
+  - **Prevent**
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # HTTPS Implementation (TLS/SSL)
 
+## Automatic Scan
 
 
-## Manual Scan
+## Manual Scan only
 
 **Alert: Strict-Transport-Security Header Not Set**
 - **Identify**
@@ -172,33 +152,9 @@ Case Study website: https://ibayaq.kedah.gov.my/
     - Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Cookie Poisoning
-
-
-
-
-## Manual Scan
-
-**Alert: **
-- **Identify**
-  - URL: []()
-  - Risk: 
-  - Confidence: 
-  - CWE ID: 
-
- - **Evaluate**
-   - 
-  
-  - **Prevent**
-    - 
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Potential XXS
 
-
-
-
-## Manual Scan
+## Automatic Scan and Manual Scan
 
 **Alert: Cookie No HttpOnly Flag**
 - **Identify**
@@ -231,9 +187,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Information Disclosure
 
-
-
-## Manual Scan
+## Manual Scan only
 
 **Alert: Information Disclosure - Suspicious Comments**
 - **Identify**
@@ -264,3 +218,11 @@ Case Study website: https://ibayaq.kedah.gov.my/
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## No alerts found in:
+- Cookie Poisoning
+- JS Library
+- Secured Cookies
+- CSRF
+- Hash disclosure
+
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
