@@ -19,6 +19,7 @@ iBayaq is a website that aims to facilitate and speed up the payment of various 
 Case Study website: https://ibayaq.kedah.gov.my/
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Total Alerts/Flags Scanned
 
 **Automated scan:**
 4 orange flags, 4 yellow flags, 5 blue flags
@@ -29,7 +30,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc
 
-## Automated Scan and Manual Scan
+### Automated Scan and Manual Scan
 
 **Alert: Cross-Domain JavaScript Source File Inclusion**
 - **Identify**
@@ -56,7 +57,7 @@ be controlled by end users of the application.
   - **Prevent**
     - Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.
 
-## Manual Scan only
+### Manual Scan only
 
 **Alert: Server Leaks Version Information via "Server" HTTP Response Header Field**
 - **Identify**
@@ -74,7 +75,7 @@ be controlled by end users of the application.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Content Security Policy (CSP)
 
-## Automated Scan and Manual Scan
+### Automated Scan and Manual Scan
 **Alert: CSP: Wildcard Directive**
 - **Identify**
   - Risk: medium
@@ -134,7 +135,7 @@ be controlled by end users of the application.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## HTTPS Implementation (TLS/SSL)
 
-## Manual Scan
+### Manual Scan
 
 **Alert: Strict-Transport-Security Header Not Set**
 - **Identify**
@@ -152,7 +153,7 @@ be controlled by end users of the application.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Potential XXS
 
-## Automatic Scan and Manual Scan
+### Automatic Scan and Manual Scan
 
 **Alert: Cookie No HttpOnly Flag**
 - **Identify**
@@ -185,7 +186,7 @@ be controlled by end users of the application.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Information Disclosure
 
-## Manual Scan
+### Manual Scan
 
 **Alert: Information Disclosure - Suspicious Comments**
 - **Identify**
@@ -215,8 +216,7 @@ be controlled by end users of the application.
     - Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-## No alerts found in:
+### No alerts found in:
 - Cookie Poisoning
 - JS Library
 - Secured Cookies
