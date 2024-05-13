@@ -17,7 +17,7 @@ iBayaq is a website that aims to facilitate and speed up the payment of various 
 
 Case Study website: https://ibayaq.kedah.gov.my/
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Automated scan:**
 4 orange flags, 4 yellow flags, 5 blue flags
@@ -26,9 +26,9 @@ Case Study website: https://ibayaq.kedah.gov.my/
 8 orange flags, 7 yellow flags, 5 blue flags
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc
+## Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc
 
-## Automated Scan and manual scan
+## Automated Scan and Manual Scan
 
 **Alert: Cross-Domain JavaScript Source File Inclusion**
 - **Identify**
@@ -43,7 +43,7 @@ Case Study website: https://ibayaq.kedah.gov.my/
     - Ensure JavaScript source files are loaded from only trusted sources, and the sources can't 
 be controlled by end users of the application.
 
-**Alert: Timestam disclosure - Unix**
+**Alert: Timestam Disclosure - Unix**
 - **Identify**
   - Risk: Low
   - Confidence: low
@@ -71,7 +71,7 @@ be controlled by end users of the application.
     - Ensure that your web server, application server, load balancer, etc. is configured to suppress the "Server" header or provide generic details.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# CSP
+## Content Security Policy (CSP)
 
 ## Automated Scan and Manual Scan
 **Alert: CSP: Wildcard Directive**
@@ -131,12 +131,9 @@ be controlled by end users of the application.
     - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# HTTPS Implementation (TLS/SSL)
+## HTTPS Implementation (TLS/SSL)
 
-## Automatic Scan
-
-
-## Manual Scan only
+## Manual Scan
 
 **Alert: Strict-Transport-Security Header Not Set**
 - **Identify**
@@ -152,7 +149,7 @@ be controlled by end users of the application.
     - Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Potential XXS
+## Potential XXS
 
 ## Automatic Scan and Manual Scan
 
@@ -187,7 +184,7 @@ be controlled by end users of the application.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Information Disclosure
 
-## Manual Scan only
+## Manual Scan
 
 **Alert: Information Disclosure - Suspicious Comments**
 - **Identify**
@@ -225,4 +222,4 @@ be controlled by end users of the application.
 - CSRF
 - Hash disclosure
 
-  -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
